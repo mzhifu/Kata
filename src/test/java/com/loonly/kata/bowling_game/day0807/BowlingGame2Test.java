@@ -1,4 +1,4 @@
-package com.loonly.kata.bowling_game.day0907;
+package com.loonly.kata.bowling_game.day0807;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -10,17 +10,17 @@ import static org.junit.Assert.assertEquals;
 
 /**
  * @Author: Loonly
- * @Date: 2019/8/7 23:56
+ * @Date: 2019/8/7 23:48
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class BowlingGame3Test {
-
-  private Game3 g;
+public class BowlingGame2Test {
+  
+  private Game2 g;
   
   @Before
   public void testSetterGame() {
-    g = new Game3();
+    g = new Game2();
   }
   
   @Test
@@ -57,12 +57,12 @@ public class BowlingGame3Test {
   }
   
   @Test
-  public void testStrike() {
+  public void testOneStrike() {
     rollStrike();
     g.roll(3);
     g.roll(4);
-    rollMany(16, 0);
-    rollMany(24, g.score());
+    rollMany(16,  0);
+    assertEquals(24, g.score());
   }
   
   private void rollStrike() {

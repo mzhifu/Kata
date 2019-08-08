@@ -1,11 +1,11 @@
-package com.loonly.kata.bowling_game.day0907;
+package com.loonly.kata.bowling_game.day0808;
 
 /**
  * @Author: Loonly
- * @Date: 2019/8/7 23:57
+ * @Date: 2019/8/8 23:01
  */
 
-public class Game3 {
+public class Game1 {
   
   private int[] arrays = new int[21];
   
@@ -19,7 +19,7 @@ public class Game3 {
     int score = 0;
     int frameIndex = 0;
     for (int frame = 0; frame < 10; frame++) {
-      if (isStrike(frameIndex)) {
+      if (isStrike(arrays[frameIndex])) {
         score += 10 + strikeBonus(frameIndex);
         frameIndex ++;
       } else if (isSpare(frameIndex)) {
@@ -29,6 +29,7 @@ public class Game3 {
         score += sum(frameIndex);
         frameIndex += 2;
       }
+      
     }
     return score;
   }
@@ -41,15 +42,15 @@ public class Game3 {
     return arrays[frameIndex + 2];
   }
   
+  private boolean isSpare(int frameIndex) {
+    return arrays[frameIndex] + arrays[frameIndex + 1] == 10;
+  }
+  
   private int strikeBonus(int frameIndex) {
     return arrays[frameIndex + 1] + arrays[frameIndex + 2];
   }
   
-  private boolean isStrike(int frameIndex) {
-    return arrays[frameIndex] == 10;
-  }
-  
-  private boolean isSpare(int frameIndex) {
-    return arrays[frameIndex] + arrays[frameIndex + 1] == 10;
+  private boolean isStrike(int array) {
+    return array == 10;
   }
 }

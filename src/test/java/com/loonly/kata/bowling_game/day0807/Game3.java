@@ -1,11 +1,11 @@
-package com.loonly.kata.bowling_game.day0907;
+package com.loonly.kata.bowling_game.day0807;
 
 /**
  * @Author: Loonly
- * @Date: 2019/8/7 23:41
+ * @Date: 2019/8/7 23:57
  */
 
-public class Game1 {
+public class Game3 {
   
   private int[] arrays = new int[21];
   

@@ -1,4 +1,4 @@
-package com.loonly.kata.bowling_game.day0907;
+package com.loonly.kata.bowling_game.day0807;
 
 import org.junit.Before;
 import org.junit.Test;
