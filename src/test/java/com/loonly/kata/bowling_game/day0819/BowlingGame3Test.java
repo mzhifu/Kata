@@ -1,6 +1,5 @@
 package com.loonly.kata.bowling_game.day0819;
 
-import com.loonly.kata.bowling_game.day0819.Game3;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -69,5 +68,11 @@ public class BowlingGame3Test {
   
   private void rollStrike() {
     g.roll(10);
+  }
+  
+  @Test
+  public void testPerfectGame() {
+    rollMany(12, 10);
+    assertEquals(300, g.score());
   }
 }
