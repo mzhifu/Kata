@@ -7,6 +7,8 @@ package com.loonly.kata.gof_test.day1103;
 
 public class DoubleSingleton {
   
+  private DoubleSingleton(){}
+  
   private static volatile DoubleSingleton doubleSingleton;
   
   public static DoubleSingleton getInstance() {

@@ -7,6 +7,8 @@ package com.loonly.kata.gof_test.day1102;
 
 public class InnerStaticSingleton {
   
+  private InnerStaticSingleton(){}
+  
   private static class InnerSingleton {
     static final InnerStaticSingleton innerStaticSingleton = new InnerStaticSingleton();
   }

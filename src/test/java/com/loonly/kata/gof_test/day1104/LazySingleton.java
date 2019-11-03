@@ -10,7 +10,6 @@ public class LazySingleton {
   private static LazySingleton lazySingleton;
   
   private LazySingleton(){
-  
   }
   
   public static synchronized LazySingleton getInstance() {
